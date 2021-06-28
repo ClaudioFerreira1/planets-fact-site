@@ -1,0 +1,42 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  background: var(--white);
+  font-size: 1.6em;
+  font-family: 'Antonio',
+    'Spartan',
+    sans-serif;
+}
+
+:root {
+  --background: #070724;
+  --white: #FFFFFF;
+  --dark-grey: #38384F;
+  --grey: #838391;
+  --mercury: #DEF4FC;
+  --venus: #EDA249;
+  --earth: #545BFE;
+  --mars: #D14C32;
+  --jupiter: #ECAD7A;
+  --saturn: #FCCB6B;
+  --uranus: #65F0D5;
+  --neptune: #2D68F0;
+}
+
+/* font-family: 'Antonio', sans-serif;
+font-family: 'Spartan', sans-serif; */
+
+h1 {
+  font-family: 'Arial',
+    sans-serif;
+  /* font-size: 80px; */
+  /* font-size: 2em; */
+}
