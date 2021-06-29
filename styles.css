@@ -14,6 +14,8 @@ body {
   font-family: 'Antonio',
     'Spartan',
     sans-serif;
+  position: relative;
+  /* ####################################################### */
 }
 
 :root {
@@ -31,12 +33,82 @@ body {
   --neptune: #2D68F0;
 }
 
+h1 {
+  font-family: 'Antonio',
+    sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 8rem;
+  line-height: 10.4rem;
+  text-transform: uppercase;
+  color: var(--white);
+}
+
+h2 {
+  font-family: 'Antonio',
+    sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 4rem;
+  line-height: 5.2rem;
+  letter-spacing: -1.5rem;
+  text-transform: uppercase;
+  color: var(--white);
+}
+
 /* font-family: 'Antonio', sans-serif;
 font-family: 'Spartan', sans-serif; */
 
-h1 {
-  font-family: 'Arial',
+
+h3 {
+  font-family: 'Spartan',
     sans-serif;
-  /* font-size: 80px; */
-  /* font-size: 2em; */
+  font-style: normal;
+  font-weight: bold;
+  font-size: 1.2rem;
+  line-height: 2.5rem;
+  letter-spacing: 0.257143rem;
+  text-transform: uppercase;
+  color: var(--white);
+}
+
+h4 {
+  font-family: 'Spartan',
+    sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 1.1rem;
+  line-height: 2.5rem;
+  letter-spacing: 0.1rem;
+  text-transform: uppercase;
+  color: var(--white);
+}
+
+p {
+  font-family: 'Spartan',
+    sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 1.4rem;
+  line-height: 2.5rem;
+  color: var(--white);
+}
+
+#b1 {
+  text-decoration: none;
+  color: #65F0D5;
+}
+
+#b1::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 0.25rem;
+  background-color: #545BFE;
+  transform: scaleX(0);
+}
+
+#b1:hover {
+  transform: scaleX(1);
 }
