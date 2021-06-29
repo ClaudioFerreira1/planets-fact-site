@@ -1,3 +1,6 @@
+/* font-family: 'Antonio', sans-serif;
+font-family: 'Spartan', sans-serif; */
+
 * {
   margin: 0;
   padding: 0;
@@ -9,13 +12,16 @@ html {
 }
 
 body {
-  background: var(--white);
+  background: var(--background);
   font-size: 1.6em;
   font-family: 'Antonio',
     'Spartan',
     sans-serif;
-  position: relative;
-  /* ####################################################### */
+  background-image: url('./assets/background-stars.svg');
+  background-repeat: repeat;
+  background-size: 60%;
+  background-position: left top;
+  /* transform: scale(0.5, 0.5); */
 }
 
 :root {
@@ -51,14 +57,10 @@ h2 {
   font-weight: normal;
   font-size: 4rem;
   line-height: 5.2rem;
-  letter-spacing: -1.5rem;
+  letter-spacing: -0.105rem;
   text-transform: uppercase;
   color: var(--white);
 }
-
-/* font-family: 'Antonio', sans-serif;
-font-family: 'Spartan', sans-serif; */
-
 
 h3 {
   font-family: 'Spartan',
@@ -72,7 +74,8 @@ h3 {
   color: var(--white);
 }
 
-h4 {
+h4,
+a {
   font-family: 'Spartan',
     sans-serif;
   font-style: normal;
@@ -94,21 +97,70 @@ p {
   color: var(--white);
 }
 
-#b1 {
-  text-decoration: none;
-  color: #65F0D5;
+nav#header__main-nav {
+  display: flex;
+  height: 8.5rem;
+  justify-content: space-between;
+  align-items: center;
 }
 
-#b1::before {
+header#header {
+  position: relative;
+}
+
+nav#header__main-nav::after {
   content: '';
   position: absolute;
   left: 0;
+  bottom: 0;
+  height: 0.1rem;
   width: 100%;
-  height: 0.25rem;
-  background-color: #545BFE;
-  transform: scaleX(0);
+  background-color: var(--grey);
+  opacity: 0.2;
+  mix-blend-mode: normal;
 }
 
-#b1:hover {
-  transform: scaleX(1);
+ul.header__main-nav--links {
+  display: flex;
+  list-style-type: none;
+}
+
+ul.header__main-nav--links * {
+  list-style-type: none;
+  text-decoration: none;
+}
+
+#header__main-nav--planet {
+  margin-right: 3.3rem;
+}
+
+h2.header__main-nav--h2 {
+  font-size: 2.8rem;
+  line-height: 3.6rem;
+  margin-left: 3.2rem;
+}
+
+
+div.header__main-nav--div-icon {
+  /**********************************************/
+  display: none;
+}
+
+@media screen and (max-width: 1300px) {
+  body {
+    background-size: 110%;
+  }
+}
+
+@media screen and (max-width: 760px) {
+  body {
+    background-size: 200%;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  div.header__main-nav--div-icon {
+    /**********************************************/
+    display: flex;
+  }
 }

@@ -1,3 +1,11 @@
-import data from './data.json'
+import data from './data.js'
 
-console.log(data[0])
+function generatePlanets(dbTest) {
+  var tag = document.getElementById('header__main-nav--planet')
+
+  dbTest.forEach((planet) => {
+    tag.innerHTML += planet.name
+  })
+}
+
+generatePlanets(data);
