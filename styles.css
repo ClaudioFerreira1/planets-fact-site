@@ -123,15 +123,59 @@ nav#header__main-nav::after {
 ul.header__main-nav--links {
   display: flex;
   list-style-type: none;
+  margin-top: 1rem;
 }
 
-ul.header__main-nav--links * {
+a.neptune {
+  padding-right: 0.7rem;
+}
+
+ul.header__main-nav--links a {
+  position: relative;
   list-style-type: none;
   text-decoration: none;
+  margin-right: 2.8vw;
 }
 
-#header__main-nav--planet {
-  margin-right: 3.3rem;
+ul.header__main-nav--links a:hover::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 4rem;
+  width: 100%;
+  height: 0.25rem;
+}
+
+a.mercury:hover::before {
+  background-color: var(--mercury);
+}
+
+a.venus:hover::before {
+  background-color: var(--venus);
+}
+
+a.earth:hover::before {
+  background-color: var(--earth);
+}
+
+a.mars:hover::before {
+  background-color: var(--mars);
+}
+
+a.jupiter:hover::before {
+  background-color: var(--jupiter);
+}
+
+a.saturn:hover::before {
+  background-color: var(--saturn);
+}
+
+a.uranus:hover::before {
+  background-color: var(--uranus);
+}
+
+a.neptune:hover::before {
+  background-color: var(--neptune);
 }
 
 h2.header__main-nav--h2 {
@@ -142,7 +186,6 @@ h2.header__main-nav--h2 {
 
 
 div.header__main-nav--div-icon {
-  /**********************************************/
   display: none;
 }
 
@@ -152,15 +195,151 @@ div.header__main-nav--div-icon {
   }
 }
 
-@media screen and (max-width: 760px) {
-  body {
-    background-size: 200%;
+@media screen and (max-width: 1000px) {
+
+  h2.header__main-nav--h2 {
+    margin-left: 0;
+  }
+
+  ul.header__main-nav--links a {
+    margin-right: 4.3vw;
+  }
+
+  nav#header__main-nav {
+    flex-direction: column;
+    height: 15.9rem;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+
+  nav#header__main-nav::after {
+    top: 15.9rem;
+  }
+
+  ul.header__main-nav--links {
+    margin-right: 0;
+  }
+
+  .header__main-nav--links a.neptune {
+    margin-right: 0;
+    padding-right: 0;
   }
 }
 
-@media screen and (max-width: 450px) {
+@media screen and (max-width: 675px) {
+  body {
+    background-size: 200%;
+  }
+
   div.header__main-nav--div-icon {
-    /**********************************************/
     display: flex;
+  }
+
+  nav#header__main-nav {
+    flex-direction: row;
+  }
+
+  nav#header__main-nav::after {
+    top: 6.8rem;
+  }
+
+  nav#header__main-nav {
+    height: 6.8rem;
+    justify-content: space-between;
+    margin: 0 2.4rem;
+  }
+
+  .header__main-nav--div-render-links {
+    position: absolute;
+    /* display: block; */
+  }
+
+  ul.header__main-nav--links {
+    display: flex;
+    flex-direction: column;
+  }
+
+  ul.header__main-nav--links a::before,
+  ul.header__main-nav--links a:hover::before,
+  ul.header__main-nav--links a:active::before {
+    content: "";
+    margin-right: 8vw;
+    position: relative;
+    display: inline-block;
+    width: 1.6rem;
+    height: 1.6rem;
+    -moz-border-radius: 0.8rem;
+    -webkit-border-radius: 0.8rem;
+    border-radius: 0.8rem;
+  }
+
+  ul.header__main-nav--links .mercury::before {
+    background-color: var(--mercury);
+  }
+
+  ul.header__main-nav--links .venus::before {
+    background-color: var(--venus);
+  }
+
+  ul.header__main-nav--links .earth::before {
+    background-color: var(--earth);
+  }
+
+  ul.header__main-nav--links .mars::before {
+    background-color: var(--mars);
+  }
+
+  ul.header__main-nav--links .jupiter::before {
+    background-color: var(--jupiter);
+  }
+
+  ul.header__main-nav--links .saturn::before {
+    background-color: var(--saturn);
+  }
+
+  ul.header__main-nav--links .uranus::before {
+    background-color: var(--uranus);
+  }
+
+  ul.header__main-nav--links .neptune::before {
+    background-color: var(--neptune);
+
+  }
+
+  ul.header__main-nav--links li::after {
+    content: url('./assets/icon-chevron.svg');
+    color: var(--grey);
+    position: absolute;
+    left: 75vw;
+  }
+
+  ul.header__main-nav--links * {
+    margin-bottom: calc(4.6vh + 3vw);
+  }
+
+  div.header__main-nav--div-render-links {
+    margin-top: calc(95vh + 14vw);
+    margin-left: 5vw;
+  }
+
+  a.header__main-nav--planet {
+    font-size: calc(1.5vh + 1.3vw);
+    /* border-bottom: 0.1rem var(--grey) solid; */
+  }
+
+  h2.header__main-nav--h2 {
+    font-size: calc(2.7vh + 3.3vw);
+  }
+
+  a.header__main-nav--planet::after {
+    content: '';
+    position: absolute;
+    left: -3vw;
+    bottom: -3.5vh;
+    height: 0.1rem;
+    width: 85vw;
+    background-color: var(--white);
+    opacity: 0.1;
+    mix-blend-mode: normal;
   }
 }
