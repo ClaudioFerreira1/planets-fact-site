@@ -198,7 +198,7 @@ div.header__main-nav--div-icon {
 #upper-section__left--img-div {
   display: flex;
   width: 65vw;
-  height: 80vh;
+  height: 75vh;
   align-items: center;
   justify-content: center;
 }
@@ -219,7 +219,7 @@ div.header__main-nav--div-icon {
   display: flex;
   flex-direction: column;
   row-gap: 2.4rem;
-  margin-top: 14.5vh;
+  margin-top: 12vh;
 }
 
 #upper-section__right {
@@ -234,18 +234,45 @@ div.header__main-nav--div-icon {
 }
 
 .upper-section__button {
+  display: flex;
+  align-items: center;
   height: 4.8rem;
   background-color: var(--background);
   mix-blend-mode: normal;
-  opacity: 0.2;
-  border: 1px solid #FFFFFF;
-}
-
-div.upper-section__right-bottom h3 * {
+  border: 1px solid rgba(255, 255, 255, .2);
   color: white;
+  padding-left: 2.8rem;
 }
 
+.upper-section__button:hover {
+  cursor: pointer;
+  background: rgba(255, 255, 255, .2);
+  mix-blend-mode: normal;
+}
 
+.span-number {
+  margin-right: 2.8rem;
+  mix-blend-mode: normal;
+  color: rgba(255, 255, 255, .5);
+}
+
+.source {
+  mix-blend-mode: normal;
+  color: rgba(255, 255, 255, .5);
+}
+
+.source span {
+  text-decoration: underline;
+}
+
+/* .source::after {
+  content: url(./assets/icon-source.svg);
+  margin-right: 0.8rem;
+  mix-blend-mode: normal;
+  opacity: 0.5;
+} */
+
+/* TODO SPAN SOURCE WIKIPEDIA */
 
 
 @media screen and (max-width: 1300px) {
