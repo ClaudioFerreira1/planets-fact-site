@@ -224,6 +224,10 @@ div.header__main-nav--div-icon {
     margin-right: 0;
     padding-right: 0;
   }
+
+  ul.header__main-nav--links a:hover::before {
+    top: 4.6rem;
+  }
 }
 
 @media screen and (max-width: 675px) {
@@ -233,6 +237,7 @@ div.header__main-nav--div-icon {
 
   div.header__main-nav--div-icon {
     display: flex;
+    margin-top: 1.2rem;
   }
 
   nav#header__main-nav {
@@ -251,7 +256,7 @@ div.header__main-nav--div-icon {
 
   .header__main-nav--div-render-links {
     position: absolute;
-    /* display: block; */
+    display: none;
   }
 
   ul.header__main-nav--links {
@@ -259,49 +264,53 @@ div.header__main-nav--div-icon {
     flex-direction: column;
   }
 
-  ul.header__main-nav--links a::before,
-  ul.header__main-nav--links a:hover::before,
-  ul.header__main-nav--links a:active::before {
+  ul.header__main-nav--links li::before {
     content: "";
-    margin-right: 8vw;
-    position: relative;
+    left: -10vw;
+    margin-top: 0.001rem;
+    position: absolute;
     display: inline-block;
-    width: 1.6rem;
-    height: 1.6rem;
-    -moz-border-radius: 0.8rem;
-    -webkit-border-radius: 0.8rem;
-    border-radius: 0.8rem;
+    width: 2rem;
+    height: 2rem;
+    -moz-border-radius: 1rem;
+    -webkit-border-radius: 1rem;
+    border-radius: 1rem;
+    background-color: violet;
   }
 
-  ul.header__main-nav--links .mercury::before {
+  ul.header__main-nav--links a:hover::before {
+    background-color: unset;
+  }
+
+  ul.header__main-nav--links :nth-child(1):before {
     background-color: var(--mercury);
   }
 
-  ul.header__main-nav--links .venus::before {
+  ul.header__main-nav--links :nth-child(2):before {
     background-color: var(--venus);
   }
 
-  ul.header__main-nav--links .earth::before {
+  ul.header__main-nav--links :nth-child(3):before {
     background-color: var(--earth);
   }
 
-  ul.header__main-nav--links .mars::before {
+  ul.header__main-nav--links :nth-child(4):before {
     background-color: var(--mars);
   }
 
-  ul.header__main-nav--links .jupiter::before {
+  ul.header__main-nav--links :nth-child(5):before {
     background-color: var(--jupiter);
   }
 
-  ul.header__main-nav--links .saturn::before {
+  ul.header__main-nav--links :nth-child(6):before {
     background-color: var(--saturn);
   }
 
-  ul.header__main-nav--links .uranus::before {
+  ul.header__main-nav--links :nth-child(7):before {
     background-color: var(--uranus);
   }
 
-  ul.header__main-nav--links .neptune::before {
+  ul.header__main-nav--links :nth-child(8):before {
     background-color: var(--neptune);
 
   }
@@ -310,7 +319,7 @@ div.header__main-nav--div-icon {
     content: url('./assets/icon-chevron.svg');
     color: var(--grey);
     position: absolute;
-    left: 75vw;
+    left: 67vw;
   }
 
   ul.header__main-nav--links * {
@@ -319,27 +328,44 @@ div.header__main-nav--div-icon {
 
   div.header__main-nav--div-render-links {
     margin-top: calc(95vh + 14vw);
-    margin-left: 5vw;
+    left: 20vw;
   }
 
   a.header__main-nav--planet {
     font-size: calc(1.5vh + 1.3vw);
-    /* border-bottom: 0.1rem var(--grey) solid; */
   }
 
   h2.header__main-nav--h2 {
     font-size: calc(2.7vh + 3.3vw);
   }
 
-  a.header__main-nav--planet::after {
+  ul.header__main-nav--links a:after {
     content: '';
     position: absolute;
-    left: -3vw;
+    left: -10vw;
     bottom: -3.5vh;
     height: 0.1rem;
-    width: 85vw;
+    width: 80vw;
     background-color: var(--white);
     opacity: 0.1;
     mix-blend-mode: normal;
   }
+
+  ul.header__main-nav--links .neptune:after {
+    background-color: unset;
+  }
+
+  .change-anchor-color {
+    opacity: 0.25;
+  }
+
+  .show-div {
+    display: unset;
+  }
+
+  .test {
+    display: none;
+  }
+
+
 }
