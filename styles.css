@@ -184,15 +184,77 @@ h2.header__main-nav--h2 {
   margin-left: 3.2rem;
 }
 
-
 div.header__main-nav--div-icon {
   display: none;
 }
+
+/****************************** Header finish ******************************/
+
+#upper-section {
+  display: inline-flex;
+  flex-direction: row;
+}
+
+#upper-section__left--img-div {
+  display: flex;
+  width: 65vw;
+  height: 80vh;
+  align-items: center;
+  justify-content: center;
+}
+
+.upper-section__img-div--first-image {
+  position: absolute;
+  z-index: -1;
+  width: 20vw;
+}
+
+.upper-section__img-div--second-image {
+  z-index: 1;
+  width: 11vw;
+  margin-top: 25rem;
+}
+
+#upper-section__right-top {
+  display: flex;
+  flex-direction: column;
+  row-gap: 2.4rem;
+  margin-top: 14.5vh;
+}
+
+#upper-section__right {
+  width: 35rem;
+}
+
+#upper-section__right-bottom {
+  display: flex;
+  flex-direction: column;
+  margin-top: 4rem;
+  row-gap: 1.6rem;
+}
+
+.upper-section__button {
+  height: 4.8rem;
+  background-color: var(--background);
+  mix-blend-mode: normal;
+  opacity: 0.2;
+  border: 1px solid #FFFFFF;
+}
+
+div.upper-section__right-bottom h3 * {
+  color: white;
+}
+
+
+
 
 @media screen and (max-width: 1300px) {
   body {
     background-size: 110%;
   }
+
+  /****************************** Header finish ******************************/
+
 }
 
 @media screen and (max-width: 1000px) {
@@ -228,11 +290,18 @@ div.header__main-nav--div-icon {
   ul.header__main-nav--links a:hover::before {
     top: 4.6rem;
   }
+
+  /****************************** Header finish ******************************/
 }
+
 
 @media screen and (max-width: 675px) {
   body {
     background-size: 200%;
+  }
+
+  .disable-background {
+    background-size: 0;
   }
 
   div.header__main-nav--div-icon {
@@ -275,7 +344,6 @@ div.header__main-nav--div-icon {
     -moz-border-radius: 1rem;
     -webkit-border-radius: 1rem;
     border-radius: 1rem;
-    background-color: violet;
   }
 
   ul.header__main-nav--links a:hover::before {
@@ -312,7 +380,6 @@ div.header__main-nav--div-icon {
 
   ul.header__main-nav--links :nth-child(8):before {
     background-color: var(--neptune);
-
   }
 
   ul.header__main-nav--links li::after {
@@ -363,9 +430,5 @@ div.header__main-nav--div-icon {
     display: unset;
   }
 
-  .test {
-    display: none;
-  }
-
-
+  /****************************** Header finish ******************************/
 }
