@@ -5,6 +5,7 @@ font-family: 'Spartan', sans-serif; */
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  user-select: none;
 }
 
 html {
@@ -217,7 +218,7 @@ div.header__main-nav--div-icon {
   height: 19.9rem;
   margin-top: 18.4rem;
   margin-left: 1.25rem;
-  visibility: hidden;
+  visibility: visible;
 }
 
 #upper-section__right-top {
@@ -378,13 +379,6 @@ p.source span::after {
   }
 }
 
-@media screen and (max-width: 740px) {
-  /* #upper-section__right-top {
-    transform: scale(0.9);
-  } */
-}
-
-
 @media screen and (max-width: 690px) {
   body {
     background-size: 200%;
@@ -521,4 +515,84 @@ p.source span::after {
   }
 
   /****************************** Header finish ******************************/
+
+  .span-number,
+  .span-word {
+    display: none;
+  }
+
+  #upper-section__right-bottom {
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    width: 115vw;
+    justify-content: space-around;
+    flex: 1;
+    top: 7rem;
+    height: 5.1rem;
+  }
+
+  .upper-section__button {
+    padding: 0;
+    border: none;
+  }
+
+  .upper-section__button:hover {
+    background-color: unset;
+  }
+
+  #upper-section__right-top {
+    text-align: center;
+    width: 85vw;
+    margin: 0;
+  }
+
+  h1 {
+    font-size: 4rem;
+    line-height: 5.176rem;
+  }
+
+  h3 {
+    font-size: 0.9rem;
+    line-height: 1.1rem;
+    letter-spacing: 0.193rem;
+    color: rgba(255, 255, 255, .5);
+  }
+
+  h3:hover {
+    color: rgba(255, 255, 255);
+  }
+
+  p {
+    font-size: 1.2rem;
+  }
+
+  div#upper-section__right-bottom::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 0.1rem;
+    width: 100%;
+    background-color: var(--grey);
+    opacity: 0.2;
+    mix-blend-mode: normal;
+  }
+
+  div#upper-section__left--img-div {
+    height: 30.4rem;
+    margin-top: 5.35rem;
+  }
+
+  #upper-section__img-div--first-image {
+    transform: scale(0.354);
+    margin-left: 0.5rem;
+  }
+
+  #upper-section__img-div--second-image {
+    margin-top: 7.5rem;
+    margin-left: 0.5rem;
+    transform: scale(0.354);
+  }
+
 }
