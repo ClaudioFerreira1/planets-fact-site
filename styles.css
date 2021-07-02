@@ -198,21 +198,26 @@ div.header__main-nav--div-icon {
 #upper-section__left--img-div {
   display: flex;
   width: 65vw;
-  height: 75vh;
-  align-items: center;
+  height: 75.4rem;
   justify-content: center;
+  align-items: center;
 }
 
-.upper-section__img-div--first-image {
+#upper-section__img-div--first-image {
   position: absolute;
-  z-index: -1;
-  width: 20vw;
+  z-index: 0;
+  margin-left: 1.25rem;
+  margin-top: 1.5rem;
 }
 
-.upper-section__img-div--second-image {
+#upper-section__img-div--second-image {
+  position: absolute;
   z-index: 1;
-  width: 11vw;
-  margin-top: 25rem;
+  width: 16.3rem;
+  height: 19.9rem;
+  margin-top: 18.4rem;
+  margin-left: 1.25rem;
+  visibility: hidden;
 }
 
 #upper-section__right-top {
@@ -220,9 +225,6 @@ div.header__main-nav--div-icon {
   flex-direction: column;
   row-gap: 2.4rem;
   margin-top: 12vh;
-}
-
-#upper-section__right {
   width: 35rem;
 }
 
@@ -231,6 +233,7 @@ div.header__main-nav--div-icon {
   flex-direction: column;
   margin-top: 4rem;
   row-gap: 1.6rem;
+  width: 35rem;
 }
 
 .upper-section__button {
@@ -239,14 +242,14 @@ div.header__main-nav--div-icon {
   height: 4.8rem;
   background-color: var(--background);
   mix-blend-mode: normal;
-  border: 1px solid rgba(255, 255, 255, .2);
+  border: 0.08rem solid rgb(56, 56, 79);
   color: white;
   padding-left: 2.8rem;
 }
 
 .upper-section__button:hover {
   cursor: pointer;
-  background: rgba(255, 255, 255, .2);
+  background-color: rgb(56, 56, 79);
   mix-blend-mode: normal;
 }
 
@@ -263,16 +266,18 @@ div.header__main-nav--div-icon {
 
 .source span {
   text-decoration: underline;
+  display: inline-flex;
+  flex-direction: row;
+  column-gap: 0.8rem;
 }
 
-/* .source::after {
+p.source span::after {
   content: url(./assets/icon-source.svg);
-  margin-right: 0.8rem;
   mix-blend-mode: normal;
   opacity: 0.5;
-} */
+}
 
-/* TODO SPAN SOURCE WIKIPEDIA */
+
 
 
 @media screen and (max-width: 1300px) {
@@ -284,7 +289,7 @@ div.header__main-nav--div-icon {
 
 }
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 1050px) {
 
   h2.header__main-nav--h2 {
     margin-left: 0;
@@ -319,10 +324,68 @@ div.header__main-nav--div-icon {
   }
 
   /****************************** Header finish ******************************/
+
+  #upper-section {
+    flex-direction: column;
+  }
+
+  #upper-section__left--img-div {
+    width: 100vw;
+    height: 46rem;
+    align-items: center;
+    justify-content: center;
+  }
+
+  #upper-section__img-div--first-image {
+    margin: 0;
+    transform: scale(0.64);
+  }
+
+  #upper-section__img-div--second-image {
+    margin-left: 0;
+    margin-top: 15rem;
+    transform: scale(0.64);
+  }
+
+  #upper-section__right {
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 100vw;
+    display: inline-flex;
+  }
+
+  #upper-section__right-top {
+    margin-top: 0;
+    margin-left: 3rem;
+    width: 44vw;
+  }
+
+  #upper-section__right-bottom {
+    margin-top: 0;
+    justify-content: center;
+    height: 28rem;
+    transform: scaleX(0.88);
+  }
+
+  h1 {
+    font-size: 4.8rem;
+    line-height: 6.21rem;
+  }
+
+  p {
+    font-size: 1.5rem;
+    line-height: 2.2rem;
+  }
+}
+
+@media screen and (max-width: 740px) {
+  /* #upper-section__right-top {
+    transform: scale(0.9);
+  } */
 }
 
 
-@media screen and (max-width: 675px) {
+@media screen and (max-width: 690px) {
   body {
     background-size: 200%;
   }
