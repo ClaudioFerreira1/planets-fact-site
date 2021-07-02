@@ -265,21 +265,47 @@ div.header__main-nav--div-icon {
   color: rgba(255, 255, 255, .5);
 }
 
-.source span {
+.source a {
   text-decoration: underline;
+  color: rgba(255, 255, 255, .5);
+  font-family: Spartan;
+  text-transform: capitalize;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 25px;
+  text-decoration-line: underline;
   display: inline-flex;
   flex-direction: row;
   column-gap: 0.8rem;
 }
 
-p.source span::after {
+p.source a::after {
   content: url(./assets/icon-source.svg);
   mix-blend-mode: normal;
   opacity: 0.5;
 }
 
+/****************************** Main finish ******************************/
 
+#bottom-section__main-div {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 3vh 10vw 5vh 10vw;
+}
 
+div#bottom-section__main-div h4 {
+  color: rgba(255, 255, 255, .5);
+}
+
+div#bottom-section__main-div div {
+  width: 16vw;
+  height: 12.8rem;
+  border: 0.08rem solid rgb(56, 56, 79);
+  padding-top: 2.2rem;
+  padding-left: 2.2rem;
+}
 
 @media screen and (max-width: 1300px) {
   body {
@@ -290,7 +316,7 @@ p.source span::after {
 
 }
 
-@media screen and (max-width: 1050px) {
+@media screen and (max-width: 1080px) {
 
   h2.header__main-nav--h2 {
     margin-left: 0;
@@ -376,6 +402,28 @@ p.source span::after {
   p {
     font-size: 1.5rem;
     line-height: 2.2rem;
+  }
+
+  div#bottom-section__main-div h4 {
+    font-size: 1rem;
+  }
+
+  div#bottom-section__main-div h2 {
+    font-size: 2.8rem;
+  }
+
+  div#bottom-section__main-div div {
+    height: 11rem;
+    width: 21vw;
+    padding-top: 1.6rem;
+    padding-left: 1.6rem;
+  }
+
+  /****************************** Main finish ******************************/
+
+  #bottom-section__main-div {
+    margin-left: 5vw;
+    margin-right: 5vw;
   }
 }
 
@@ -541,6 +589,36 @@ p.source span::after {
     background-color: unset;
   }
 
+  button.overview:hover::before {
+    content: '';
+    position: absolute;
+    left: 5;
+    bottom: 0;
+    width: 7rem;
+    height: 0.4rem;
+    background-color: var(--mercury);
+  }
+
+  button.structure:hover::before {
+    content: '';
+    position: absolute;
+    left: 5;
+    bottom: 0;
+    width: 7.5rem;
+    height: 0.4rem;
+    background-color: var(--mercury);
+  }
+
+  button.surface:hover::before {
+    content: '';
+    position: absolute;
+    left: 5;
+    bottom: 0;
+    width: 5.8rem;
+    height: 0.4rem;
+    background-color: var(--mercury);
+  }
+
   #upper-section__right-top {
     text-align: center;
     width: 85vw;
@@ -586,13 +664,32 @@ p.source span::after {
 
   #upper-section__img-div--first-image {
     transform: scale(0.354);
-    margin-left: 0.5rem;
   }
 
   #upper-section__img-div--second-image {
     margin-top: 7.5rem;
-    margin-left: 0.5rem;
     transform: scale(0.354);
   }
 
+  /****************************** Main finish ******************************/
+
+  div#bottom-section__main-div {
+    flex-direction: column;
+    row-gap: 0.8rem;
+  }
+
+  div#bottom-section__main-div div {
+    display: flex;
+    height: 4.8rem;
+    padding: 0 2.4rem 0 2.4rem;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  div#bottom-section__main-div h2 {
+    font-size: 2rem;
+    line-height: 2.5rem;
+  }
 }

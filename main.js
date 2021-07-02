@@ -15,3 +15,16 @@ hamburguerIcon.addEventListener("click", function () {
 //   secondImage.style.visibility = "visible";
 // });
 
+document.querySelectorAll(".header__main-nav--planet").forEach((item) => {
+  var name = item.innerHTML;
+  item.addEventListener('click', () => renderBody(`${name}`));
+});
+
+function renderBody(planet) {
+  data.forEach((objetoPlaneta) => {
+    if (planet === objetoPlaneta.name) {
+      document.getElementById("main-title").innerHTML = `${objetoPlaneta.name}`;
+      document.getElementById("main-description").innerHTML = `${objetoPlaneta.overview.content}`
+    }
+  })
+};
