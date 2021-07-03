@@ -5,8 +5,6 @@ const navBarLinks = document.getElementById("header__main-nav--div");
 const overviewButton = document.getElementById("overview");
 const internalStructureButton = document.getElementById("structure");
 const surfaceButton = document.getElementById("surface");
-const btnContainer = document.getElementById("upper-section__right-bottom");
-const btns = btnContainer.getElementsByClassName("upper-section__button");
 
 document.querySelectorAll(".header__main-nav--planet").forEach((item) => {
   var planetName = item.innerHTML;
@@ -53,6 +51,8 @@ function renderBody(planet) {
   })
 };
 
+const btnContainer = document.getElementById("upper-section__right-bottom");
+const btns = btnContainer.getElementsByClassName("upper-section__button");
 
 for (var i = 0; i < btns.length; i++) {
   btns[i].addEventListener("click", function () {

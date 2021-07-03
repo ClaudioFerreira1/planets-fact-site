@@ -307,9 +307,14 @@ div#bottom-section__main-div div {
   padding-left: 2.2rem;
 }
 
-.button-selected,
-.button-selected:hover {
-  background-color: var(--earth);
+.uranus>.button-selected,
+.uranus>.button-selected:hover {
+  background-color: var(--uranus);
+}
+
+.earth>.button-selected,
+.earth>.button-selected:hover {
+  background-color: var(--jupiter);
 }
 
 @media screen and (max-width: 1300px) {
