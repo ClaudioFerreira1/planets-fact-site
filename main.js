@@ -5,10 +5,15 @@ const navBarLinks = document.getElementById("header__main-nav--div");
 const overviewButton = document.getElementById("overview");
 const internalStructureButton = document.getElementById("structure");
 const surfaceButton = document.getElementById("surface");
+const btnContainer = document.getElementById("upper-section__right-bottom");
+const btns = btnContainer.getElementsByClassName("upper-section__button");
 
 document.querySelectorAll(".header__main-nav--planet").forEach((item) => {
   var planetName = item.innerHTML;
-  item.addEventListener('click', () => renderBody(`${planetName}`));
+
+  item.addEventListener('click', () => {
+    renderBody(`${planetName}`)
+  });
 });
 
 function renderBody(planet) {
@@ -48,17 +53,14 @@ function renderBody(planet) {
   })
 };
 
-// document.querySelectorAll(".upper-section__button").forEach((button) => {
-//   if (button.classList.contains("button-selected")) {
-//     button.classList.add("button-selected");
-//   } else {
-//     button.classList.remove("button-selected");
-//   };
-// });
 
-document.getElementById("overview").addEventListener("click",)
-
-
+for (var i = 0; i < btns.length; i++) {
+  btns[i].addEventListener("click", function () {
+    var current = document.getElementsByClassName("button-selected");
+    current[0].className = current[0].className.replace(" button-selected", "");
+    this.className += " button-selected";
+  });
+}
 
 renderBody("Earth");
 
