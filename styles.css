@@ -218,7 +218,11 @@ div.header__main-nav--div-icon {
   height: 19.9rem;
   margin-top: 18.4rem;
   margin-left: 1.25rem;
-  visibility: visible;
+  visibility: hidden;
+}
+
+.active {
+  color: red;
 }
 
 #upper-section__right-top {
@@ -252,6 +256,10 @@ div.header__main-nav--div-icon {
   cursor: pointer;
   background-color: rgb(56, 56, 79);
   mix-blend-mode: normal;
+}
+
+.upper-section__button:active {
+  background-color: red;
 }
 
 .span-number {
