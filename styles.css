@@ -221,10 +221,6 @@ div.header__main-nav--div-icon {
   visibility: hidden;
 }
 
-.active {
-  color: red;
-}
-
 #upper-section__right-top {
   display: flex;
   flex-direction: column;
@@ -256,10 +252,6 @@ div.header__main-nav--div-icon {
   cursor: pointer;
   background-color: rgb(56, 56, 79);
   mix-blend-mode: normal;
-}
-
-.upper-section__button:active {
-  background-color: red;
 }
 
 .span-number {
@@ -313,6 +305,10 @@ div#bottom-section__main-div div {
   border: 0.08rem solid rgb(56, 56, 79);
   padding-top: 2.2rem;
   padding-left: 2.2rem;
+}
+
+.button-selected {
+  background-color: var(--earth);
 }
 
 @media screen and (max-width: 1300px) {
@@ -591,12 +587,15 @@ div#bottom-section__main-div div {
   .upper-section__button {
     padding: 0;
     border: none;
+    height: 100%;
   }
 
-  .upper-section__button:hover {
+  .button-selected {
     background-color: unset;
+    border-bottom: var(--earth) 4px solid;
   }
 
+  /*
   button.overview:hover::before {
     content: '';
     position: absolute;
@@ -622,12 +621,14 @@ div#bottom-section__main-div div {
     position: absolute;
     left: 5;
     bottom: 0;
-    width: 5.8rem;
+    width: 5.9rem;
     height: 0.4rem;
     background-color: var(--mercury);
-  }
+  } */
 
   #upper-section__right-top {
+    /* Apagar esse display para voltar a mostrar as informações centrais */
+    display: none;
     text-align: center;
     width: 85vw;
     margin: 0;
@@ -682,6 +683,8 @@ div#bottom-section__main-div div {
   /****************************** Main finish ******************************/
 
   div#bottom-section__main-div {
+    /* Apagar esse display para voltar a mostrar as informações centrais */
+    display: none;
     flex-direction: column;
     row-gap: 0.8rem;
   }

@@ -44,13 +44,21 @@ function renderBody(planet) {
         document.getElementById("main-description").innerHTML = `${objetoPlaneta.geology.content}`;
         document.getElementById("upper-section__img-div--second-image").style.visibility = "visible";
       });
-
-      // if (window.innerWidth > 690) {
-
-      // }
     }
   })
 };
+
+// document.querySelectorAll(".upper-section__button").forEach((button) => {
+//   if (button.classList.contains("button-selected")) {
+//     button.classList.add("button-selected");
+//   } else {
+//     button.classList.remove("button-selected");
+//   };
+// });
+
+document.getElementById("overview").addEventListener("click",)
+
+
 
 renderBody("Earth");
 
