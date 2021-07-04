@@ -27,6 +27,7 @@ function renderBody(planet) {
     if (planet.toLowerCase() === objetoPlaneta.name.toLowerCase()) {
       document.getElementById("main-title").innerHTML = `${objetoPlaneta.name}`;
       document.getElementById("main-description").innerHTML = `${objetoPlaneta.overview.content}`;
+      document.querySelector("link[rel~='icon']").href = `./assets/planet-${planet.toLowerCase()}.svg`
       document.getElementById("source-href").href = `${objetoPlaneta.overview.source}`;
       if (document.getElementById("structure").classList.contains("button-selected")) {
         document.getElementById("upper-section__img-div--first-image").src = `${objetoPlaneta.images.internal}`;
