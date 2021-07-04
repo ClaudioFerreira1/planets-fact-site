@@ -10,6 +10,7 @@ font-family: 'Spartan', sans-serif; */
 
 html {
   font-size: 62.5%;
+  zoom: 100%;
 }
 
 body {
@@ -522,9 +523,9 @@ div#bottom-section__main-div div {
     border-radius: 1rem;
   }
 
-  ul.header__main-nav--links a:hover::before {
+  /* ul.header__main-nav--links a:hover::before {
     background-color: unset;
-  }
+  } */
 
   ul.header__main-nav--links :nth-child(1):before {
     background-color: var(--mercury);
@@ -771,8 +772,21 @@ div#bottom-section__main-div div {
     line-height: 2.5rem;
   }
 
-  #upper-section__button:hover {
+  /* #upper-section__button:hover {
     background-color: none;
   }
 
+  .upper-section__button:hover {
+    background-color: none;
+  } */
+
+  div#header__main-nav--div a.header__main-nav--planet:hover::before {
+    background-color: transparent;
+  }
+
+  #surface:hover,
+  #structure:hover,
+  #overview:hover {
+    background-color: transparent;
+  }
 }
