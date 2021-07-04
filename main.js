@@ -19,6 +19,7 @@ document.querySelectorAll(".header__main-nav--planet").forEach((item) => {
     document.getElementById("bottom-section__main-div").classList.remove("hide-content");
     navBarLinks.classList.remove("show-div");
     document.body.classList.remove("disable-background");
+    hamburguerIcon.classList.remove('change-anchor-color');
   });
 });
 
