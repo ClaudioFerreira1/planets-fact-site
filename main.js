@@ -8,9 +8,17 @@ const surfaceButton = document.getElementById("surface");
 
 document.querySelectorAll(".header__main-nav--planet").forEach((item) => {
   var planetName = item.innerHTML;
+  var divButtons = document.getElementById("upper-section__right-bottom");
 
   item.addEventListener('click', () => {
-    renderBody(`${planetName}`)
+    renderBody(`${planetName}`);
+    divButtons.setAttribute("class", `${planetName.toLocaleLowerCase()}`);
+    document.getElementById("upper-section__right-bottom").classList.remove("hide-content");
+    document.getElementById("upper-section__left--img-div").classList.remove("hide-content");
+    document.getElementById("upper-section__right").classList.remove("hide-content");
+    document.getElementById("bottom-section__main-div").classList.remove("hide-content");
+    navBarLinks.classList.remove("show-div");
+    document.body.classList.remove("disable-background");
   });
 });
 
@@ -20,7 +28,11 @@ function renderBody(planet) {
       document.getElementById("main-title").innerHTML = `${objetoPlaneta.name}`;
       document.getElementById("main-description").innerHTML = `${objetoPlaneta.overview.content}`;
       document.getElementById("source-href").href = `${objetoPlaneta.overview.source}`;
-      document.getElementById("upper-section__img-div--first-image").src = `${objetoPlaneta.images.planet}`;
+      if (document.getElementById("structure").classList.contains("button-selected")) {
+        document.getElementById("upper-section__img-div--first-image").src = `${objetoPlaneta.images.internal}`;
+      } else {
+        document.getElementById("upper-section__img-div--first-image").src = `${objetoPlaneta.images.planet}`;
+      }
       document.getElementById("upper-section__img-div--second-image").src = `${objetoPlaneta.images.geology}`;
       document.getElementById("rotation-time").innerHTML = `${objetoPlaneta.rotation}`;
       document.getElementById("revolution-time").innerHTML = `${objetoPlaneta.revolution}`;
@@ -65,32 +77,12 @@ for (var i = 0; i < btns.length; i++) {
 renderBody("Earth");
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 hamburguerIcon.addEventListener("click", function () {
   hamburguerIcon.classList.toggle('change-anchor-color');
   navBarLinks.classList.toggle("show-div");
   document.body.classList.toggle("disable-background");
+  document.getElementById("upper-section__right-bottom").classList.toggle("hide-content");
+  document.getElementById("upper-section__left--img-div").classList.toggle("hide-content");
+  document.getElementById("upper-section__right").classList.toggle("hide-content");
+  document.getElementById("bottom-section__main-div").classList.toggle("hide-content");
 });

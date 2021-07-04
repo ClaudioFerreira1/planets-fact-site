@@ -30,13 +30,13 @@ body {
   --white: #FFFFFF;
   --dark-grey: #38384F;
   --grey: #838391;
-  --mercury: #DEF4FC;
+  --mercury: #419EBB;
   --venus: #EDA249;
   --earth: #545BFE;
   --mars: #D14C32;
-  --jupiter: #ECAD7A;
-  --saturn: #FCCB6B;
-  --uranus: #65F0D5;
+  --jupiter: #e27e21;
+  --saturn: #e0a015;
+  --uranus: #2bd3b1;
   --neptune: #2D68F0;
 }
 
@@ -307,14 +307,44 @@ div#bottom-section__main-div div {
   padding-left: 2.2rem;
 }
 
+.mercury>.button-selected,
+.mercury>.button-selected:hover {
+  background-color: var(--mercury);
+}
+
+.venus>.button-selected,
+.venus>.button-selected:hover {
+  background-color: var(--venus);
+}
+
+.earth>.button-selected,
+.earth>.button-selected:hover {
+  background-color: var(--earth);
+}
+
+.mars>.button-selected,
+.mars>.button-selected:hover {
+  background-color: var(--mars);
+}
+
+.jupiter>.button-selected,
+.jupiter>.button-selected:hover {
+  background-color: var(--jupiter);
+}
+
+.saturn>.button-selected,
+.saturn>.button-selected:hover {
+  background-color: var(--saturn);
+}
+
 .uranus>.button-selected,
 .uranus>.button-selected:hover {
   background-color: var(--uranus);
 }
 
-.earth>.button-selected,
-.earth>.button-selected:hover {
-  background-color: var(--jupiter);
+.neptune>.button-selected,
+.neptune>.button-selected:hover {
+  background-color: var(--neptune);
 }
 
 @media screen and (max-width: 1300px) {
@@ -576,6 +606,13 @@ div#bottom-section__main-div div {
     display: unset;
   }
 
+  div#upper-section__right-bottom.hide-content,
+  div#upper-section__left--img-div.hide-content,
+  div#upper-section__right.hide-content,
+  div#bottom-section__main-div.hide-content {
+    display: none;
+  }
+
   /****************************** Header finish ******************************/
 
   .span-number,
@@ -600,10 +637,56 @@ div#bottom-section__main-div div {
     height: 102%;
   }
 
-  .button-selected,
-  .button-selected:hover {
+  .mercury>.button-selected,
+  .mercury>.button-selected:hover {
+    background-color: unset;
+    border-bottom: var(--mercury) 0.3rem solid;
+  }
+
+  .button-selected h3 {
+    margin-top: 0.3rem;
+  }
+
+  .venus>.button-selected,
+  .venus>.button-selected:hover {
+    background-color: unset;
+    border-bottom: var(--venus) 0.3rem solid;
+  }
+
+  .earth>.button-selected,
+  .earth>.button-selected:hover {
     background-color: unset;
     border-bottom: var(--earth) 0.3rem solid;
+  }
+
+  .mars>.button-selected,
+  .mars>.button-selected:hover {
+    background-color: unset;
+    border-bottom: var(--mars) 0.3rem solid;
+  }
+
+  .jupiter>.button-selected,
+  .jupiter>.button-selected:hover {
+    background-color: unset;
+    border-bottom: var(--jupiter) 0.3rem solid;
+  }
+
+  .saturn>.button-selected,
+  .saturn>.button-selected:hover {
+    background-color: unset;
+    border-bottom: var(--saturn) 0.3rem solid;
+  }
+
+  .uranus>.button-selected,
+  .uranus>.button-selected:hover {
+    background-color: unset;
+    border-bottom: var(--uranus) 0.3rem solid;
+  }
+
+  .neptune>.button-selected,
+  .neptune>.button-selected:hover {
+    background-color: unset;
+    border-bottom: var(--neptune) 0.3rem solid;
   }
 
   .button-selected h3 {
