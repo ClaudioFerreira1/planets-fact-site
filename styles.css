@@ -1,6 +1,3 @@
-/* font-family: 'Antonio', sans-serif;
-font-family: 'Spartan', sans-serif; */
-
 * {
   margin: 0;
   padding: 0;
@@ -190,7 +187,7 @@ div.header__main-nav--div-icon {
   display: none;
 }
 
-/****************************** Header finish ******************************/
+/****** Header finish *********/
 
 #upper-section {
   display: inline-flex;
@@ -287,7 +284,7 @@ p.source a::after {
   opacity: 0.5;
 }
 
-/****************************** Main finish ******************************/
+/***** Main finish ******/
 
 #bottom-section__main-div {
   display: flex;
@@ -353,7 +350,7 @@ div#bottom-section__main-div div {
     background-size: 110%;
   }
 
-  /****************************** Header finish ******************************/
+  /***** Header finish ******/
 
 }
 
@@ -395,7 +392,7 @@ div#bottom-section__main-div div {
     top: 4.6rem;
   }
 
-  /****************************** Header finish ******************************/
+  /***** Header finish ******/
 
   #upper-section {
     flex-direction: column;
@@ -464,7 +461,7 @@ div#bottom-section__main-div div {
     padding-left: 1.6rem;
   }
 
-  /****************************** Main finish ******************************/
+  /**** Main finish *****/
 
   #bottom-section__main-div {
     margin-left: 5vw;
@@ -614,7 +611,7 @@ div#bottom-section__main-div div {
     display: none;
   }
 
-  /****************************** Header finish ******************************/
+  /**** Header finish ****/
 
   .span-number,
   .span-word {
@@ -695,8 +692,6 @@ div#bottom-section__main-div div {
   }
 
   #upper-section__right-top {
-    /* Apagar esse display para voltar a mostrar as informações centrais */
-    /* display: none; */
     text-align: center;
     width: 85vw;
     margin: 0;
@@ -748,11 +743,9 @@ div#bottom-section__main-div div {
     transform: scale(0.354);
   }
 
-  /****************************** Main finish ******************************/
+  /**** Main finish ****/
 
   div#bottom-section__main-div {
-    /* Apagar esse display para voltar a mostrar as informações centrais */
-    /* display: none; */
     flex-direction: column;
     row-gap: 0.8rem;
   }
@@ -771,14 +764,6 @@ div#bottom-section__main-div div {
     font-size: 2rem;
     line-height: 2.5rem;
   }
-
-  /* #upper-section__button:hover {
-    background-color: none;
-  }
-
-  .upper-section__button:hover {
-    background-color: none;
-  } */
 
   div#header__main-nav--div a.header__main-nav--planet:hover::before {
     background-color: transparent;
